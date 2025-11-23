@@ -71,6 +71,22 @@ No `pom.xml`, adicione a tag `distributionManagement` apontando para o servidor 
 ## Publicação no Maven Central
 A dependência também pode ser publicada no [Maven Central](https://central.sonatype.com/). Para isso, é necessário seguir alguns passos adicionais.
 
+## Exemplo settings.xml Maven
+
+```xml
+<servers>
+    <server>
+        <id>ossrh</id>  
+        <username>zL8gYK</username> ## Token gerado no https://central.sonatype.com e configurado no pom
+        <password>N5/vuWrib6N3IEwYPYk+NJlj234123Uf6SIAjEMaG</password>
+    </server>
+    <server>
+        <id>gpg.passphrase</id> 
+        <passphrase>123456</passphrase> //senha gerada com o certificado GPG e configuradda no pom
+    </server>
+</servers>
+```
+
 ### Plugins Necessários
 Para a publicação no Maven Central, é necessário configurar os seguintes plugins no `pom.xml`:
 
@@ -99,3 +115,4 @@ Contribuições são bem-vindas! Caso queira sugerir melhorias ou corrigir probl
 
 ## Licença
 Este projeto é distribuído sob a licença MIT. Para mais detalhes, consulte o arquivo `LICENSE`.
+
