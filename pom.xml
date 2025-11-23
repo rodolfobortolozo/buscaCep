@@ -115,11 +115,10 @@
                             </execution>
                         </executions>
                         <configuration>
-                            <gpgExecutable>gpg</gpgExecutable>
-                            <useAgent>false</useAgent>
-                            <passphraseServerId>gpg.passphrase</passphraseServerId>  <!-- Senha fica no settings.xml do maven -->
-                            <gpg.keyname>51EE0B0B51635DB1</gpg.keyname> <!-- Chave gpg -->
-
+                            <gpgArguments>
+                                <arg>--pinentry-mode</arg>
+                                <arg>loopback</arg>
+                            </gpgArguments>
                         </configuration>
                     </plugin>
 
